@@ -1,56 +1,33 @@
-<!DOCTYPE html>
-<html lang="ES">
-<head>
-  <title>Iniciar sesion</title>
-  <style>
-    .login-form-center {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
-
-    body {
-      background-color: #cccccc;
-    }
-
-  </style>
-</head>
-
-<body>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<section class="section">
   <div class="container">
-    <div class="login-form-center">
+    <div class="columns center-xy">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h2 class="text-center">Log in</h2>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group">
+              <%= f.label :email %><br/>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control input-lg" %>
+            </div>
 
+            <div class="form-group">
+              <%= f.label :password %><br/>
+              <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg" %>
+            </div>
 
-      <div style="text-align: center">
-        <h2>Iniciar sesion</h2>
+            <div class="form-check">
+              <% if devise_mapping.rememberable? -%>
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              <% end -%>
+            </div>
+
+            <button type="submit" name="go" class="btn btn-lg btn-success btn-block">Sign in</button>
+          <% end %>
+          <br/>
+          <%= render "devise/shared/links" %>
+        </div>
       </div>
-      <br>
-      <section class="login-form">
-        <%= f.label :email %><br/>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control input-lg" %>
-        <br>
-        <%= f.label :password %><br/>
-        <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg" %>
-        <br>
-
-        <button type="submit" name="go" class="btn btn-lg btn-success btn-block">Sign in</button>
-        <br>
-        <div>
-          <% if devise_mapping.rememberable? -%>
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
-          <% end -%>
-<% end %>
-<br>
-<%= render "devise/shared/links" %>
-</div>
+    </div>
+  </div>
 </section>
-</div>
-</div>
-
-</body>

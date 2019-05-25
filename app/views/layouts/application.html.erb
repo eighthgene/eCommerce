@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ECommerce</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>ECommerce</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body class="<%= yield (:body_class) %>">
+
+<% if flash[:notice] %>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-danger" role="alert">
+    <%= alert %>
+  </div>
+<% end %>
+
+<!--Navbar-->
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+
+    <div class="col-lg-3">
+      <div class="brand-wrap">
+        <img class="logo" src="../assets/logo-dark.png">
+        <a class="navbar-brand" href="/">
+          <h2 class="logo-text">LOGO</h2>
+        </a>
+      </div> <!-- brand-wrap.// -->
+    </div>
+
+    <% if user_signed_in? %>
+      <div class="btn-group">
+        <button type="button" class="btn btn-success dropdown-toggle padding-ri" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account
+        </button>
+        <div class="dropdown-menu">
+          <%= link_to current_user.name, edit_user_registration_path, class: "dropdown-item" %>
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+
+      </div>
+    <% else %>
+      <form class="form-inline">
+        <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-primary", role: "button" %>
+        <div style="padding-left: 10px;">
+          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-success", role: "button" %>
+        </div>
+      </form>
+    <% end %>
+  </div>
+</nav>
+
+
+
+<%= yield(:header) %>
+<%= yield %>
+
+</div>
+<script>
+    window.setTimeout(function () {
+        $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+        });
+    }, 4000);
+</script>
+
+</body>
 </html>
