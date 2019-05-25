@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8239e3ba-c686-4c26-ad69-c6e3e264b6d1" name="Default Changelist" comment="add sign in and sign up">
+    <list default="true" id="8239e3ba-c686-4c26-ad69-c6e3e264b6d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
@@ -21,22 +22,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -69,7 +75,6 @@
       <list>
         <option value="$PROJECT_DIR$/db/migrate/20190523145833_create_products.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20190523150024_create_categories.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/bootstrap.bundle.min.js" />
         <option value="$PROJECT_DIR$/vendor/assets/stylesheets/ui.css" />
@@ -81,10 +86,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_user_widget_status.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
       </list>
     </option>
   </component>
@@ -122,19 +128,25 @@
               <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="concerns" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
+              <item name="migrate" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -287,7 +299,8 @@
       <workItem from="1558621711035" duration="536000" />
       <workItem from="1558623479303" duration="14872000" />
       <workItem from="1558652682752" duration="762000" />
-      <workItem from="1558793602309" duration="1484000" />
+      <workItem from="1558793602309" duration="2623000" />
+      <workItem from="1558796545326" duration="221000" />
     </task>
     <task id="LOCAL-00001" summary="add info page and init product page">
       <created>1558640415645</created>
@@ -310,21 +323,28 @@
       <option name="project" value="LOCAL" />
       <updated>1558653426654</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add redirect after sign in">
+      <created>1558795103217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558795103218</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17654000" />
+    <option name="totallyTimeSpent" value="19014000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="925" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17266187" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17432208" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32914573" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4997233" weight="0.32914573" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -332,13 +352,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32788944" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32788944" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3241206" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5002767" side_tool="true" weight="0.32914573" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32982844" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +367,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add info page and init product page" />
     <MESSAGE value="add sign in and sign up" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sign in and sign up" />
+    <MESSAGE value="add redirect after sign in" />
+    <option name="LAST_COMMIT_MESSAGE" value="add redirect after sign in" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eCommerce@Development__eCommerce.rcov" NAME="Development: eCommerce Coverage Results" MODIFIED="1558794354366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="eCommerce" />
@@ -422,13 +443,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/fancybox.min.css" />
     <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/fancybox.min.js" />
     <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/simple-line-icons/css/simple-line-icons.css" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -481,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -502,24 +509,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
+    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/pages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="63" selection-start-column="63" selection-end-column="63" />
+        <state relative-caret-position="18">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190523231018_devise_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="45" column="43" lean-forward="true" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
