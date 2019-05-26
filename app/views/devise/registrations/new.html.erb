@@ -3,23 +3,35 @@
     <div class="columns center-x padding-top padding-bottom">
       <div class="card" style="width: 40rem;">
         <header class="card-header">
-          <a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
+          <a><%= link_to "Log in", new_session_path(resource_name), :class => "float-right btn btn-outline-primary mt-1" %></a>
           <h4 class="card-title mt-2">Sign up</h4>
         </header>
-        <article class="card-body mx-auto">
+        <article class="card-body mx-2">
+          <br>
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
             <form>
+
               <div class="form-row">
-                <div class="col form-group">
-                  <label>First name</label>
-                  <%= f.text_field :name, required: true, :class => "form-control", :placeholder => "" %>
-                </div> <!-- form-group end.// -->
 
                 <div class="col form-group">
-                  <label>Last name</label>
-                  <%= f.text_field :last_name, required: true, :class => "form-control", :placeholder => "" %>
-                </div> <!-- form-group end.// -->
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <%= f.text_field :name, required: true, :class => "form-control", :placeholder => "First name", :type => "text" %>
+                  </div> <!-- form-group// -->
+                </div>
+
+
+                <div class="col form-group">
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <%= f.text_field :last_name, required: true, :class => "form-control", :placeholder => "Last name", :type => "text" %>
+                  </div> <!-- form-group// -->
+                </div>
               </div> <!-- form-row end.// -->
 
               <div class="form-group">
@@ -37,16 +49,10 @@
                   <label>City</label>
                   <%= f.text_field :city, required: true, :class => "form-control", :placeholder => "" %>
                 </div> <!-- form-group end.// -->
+
                 <div class="form-group col-md-6">
                   <label>Country</label>
-                  <select id="inputState" class="form-control">
-                    <option> Choose...</option>
-                    <option>Uzbekistan</option>
-                    <option>Russia</option>
-                    <option selected="">United States</option>
-                    <option>India</option>
-                    <option>Afganistan</option>
-                  </select>
+                  <%= f.text_field :country, :class => "form-control", :value => "Spain", disabled: true %>
                 </div> <!-- form-group end.// -->
               </div> <!-- form-row.// -->
 
@@ -57,7 +63,7 @@
                 </div> <!-- form-group end.// -->
                 <div class="form-group col-md-6">
                   <label>Zip</label>
-                  <%= f.text_field :zip, required: true, :class => "form-control", :placeholder => "" %>
+                  <%= f.text_field :zip, required: true, :class => "form-control", :placeholder => "", :type => "number" %>
                 </div> <!-- form-group end.// -->
               </div> <!-- form-row.// -->
 
@@ -69,7 +75,7 @@
                   <option selected="">+34</option>
                   <option value="1">+972</option>
                 </select>
-                <%= f.text_field :phone, required: true, :class => "form-control", :placeholder => "" %>
+                <%= f.text_field :phone, required: true, :class => "form-control", :placeholder => "Phone number", :type => "number" %>
               </div> <!-- form-group// -->
 
 
@@ -77,7 +83,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"> <i class="fa fa-at"></i> </span>
                 </div>
-                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", :class => "form-control", :placeholder => "Email address" %>
+                <%= f.email_field :email, required: true, autofocus: false, autocomplete: "email", :class => "form-control", :placeholder => "Email address" %>
               </div> <!-- form-group// -->
 
               <div class="form-group input-group">
@@ -90,7 +96,7 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                 </div>
-                <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "form-control input-lg", :placeholder => "Repeat password"%>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, :class => "form-control input-lg", :placeholder => "Repeat password" %>
               </div> <!-- form-group// -->
 
               <div class="form-group">
@@ -102,7 +108,9 @@
             </form>
           <% end %>
         </article> <!-- card-body end .// -->
-        <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+        <div class="border-top card-body text-center">Have an account?
+          <a><%= link_to "Log In", new_session_path(resource_name) %></a></div>
+
       </div>
 
     </div>
