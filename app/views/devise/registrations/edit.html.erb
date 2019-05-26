@@ -1,43 +1,131 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<section class="section" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <div class="columns center-x padding-top padding-bottom">
+      <div class="card" style="width: 40rem;">
+        <header class="card-header">
+          <h2 class="card-title mt-2">Edit your profile <%= current_user.name %></h2>
+        </header>
+        <article class="card-body mx-2">
+          <br>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put}) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <form>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+              <div class="form-row">
+                <div class="col form-group">
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <%= f.text_field :name, autofocus: true, :class => "form-control", autocomplete: "name", :type => "text" %>
+                  </div> <!-- form-group// -->
+                </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+                <div class="col form-group">
+                  <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    </div>
+                    <%= f.text_field :last_name, autofocus: true, :class => "form-control", autocomplete: "last_name", :type => "text" %>
+                  </div> <!-- form-group// -->
+                </div>
+              </div> <!-- form-row end.// -->
+
+              <div class="form-group">
+                <label class="form-check form-check-inline">
+                  <%= f.radio_button :is_male, true, autocomplate: "is_male", :value => true, :class => "form-check-input" %>
+                  <span class="form-check-label"> Male </span>
+                </label>
+
+                <label class="form-check form-check-inline">
+                  <%= f.radio_button :is_male, false, autocomplate: "is_male", :value => false, :class => "form-check-input" %>
+                  <span class="form-check-label"> Female</span>
+                </label>
+
+              </div> <!-- form-group end.// -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>City</label>
+                  <%= f.text_field :city, autocomplate: "city", :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+
+                <div class="form-group col-md-6">
+                  <label>Country</label>
+                  <%= f.text_field :country, :class => "form-control", :value => "Spain", disabled: true %>
+                </div> <!-- form-group end.// -->
+              </div> <!-- form-row.// -->
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Address</label>
+                  <%= f.text_field :street, autocomplate: "street", :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+                <div class="form-group col-md-6">
+                  <label>Zip</label>
+                  <%= f.text_field :zip, autocomplate: "zip", :class => "form-control", :placeholder => "", :type => "number" %>
+                </div> <!-- form-group end.// -->
+              </div> <!-- form-row.// -->
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <select disabled class="custom-select" style="max-width: 120px;">
+                  <option selected="">+34</option>
+                  <option value="1">+972</option>
+                </select>
+                <%= f.text_field :phone, autocomplate: "phone", :class => "form-control", :placeholder => "Phone number", :type => "number" %>
+              </div> <!-- form-group// -->
+
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-at"></i> </span>
+                </div>
+                <%= f.email_field :email, required: true, autofocus: false, autocomplete: "email", :class => "form-control", :placeholder => "Email address" %>
+              </div> <!-- form-group// -->
+
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+              <% end %>
+
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br/>
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <%= f.password_field :password, autocomplete: "new-password", :class => "form-control input-lg", :placeholder => "New password" %>
+              </div> <!-- form-group// -->
+              <% if @minimum_password_length %>
+                <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "form-control input-lg", :placeholder => "Repeat password" %>
+              </div> <!-- form-group// -->
+
+              <hr>
+              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br/>
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <%= f.password_field :current_password, autocomplete: "current-password", :class => "form-control input-lg", :placeholder => "Your current password" %>
+              </div> <!-- form-group// -->
+
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Update</button>
+              </div> <!-- form-group// -->
+            </form>
+          <% end %>
+        </article> <!-- card-body end .// -->
+      </div>
+
+    </div>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</section>
