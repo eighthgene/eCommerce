@@ -1,10 +1,11 @@
 <section class="section">
   <div class="container">
     <div class="columns center-xy">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 40rem;">
         <div class="card-body">
           <h2 class="text-center">Log in</h2>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
             <div class="form-group">
               <%= f.label :email %><br/>
               <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => "form-control input-lg" %>

@@ -1,29 +1,110 @@
-<h2>Sign up</h2>
+<section class="section" xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <div class="columns center-x padding-top padding-bottom">
+      <div class="card" style="width: 40rem;">
+        <header class="card-header">
+          <a href="" class="float-right btn btn-outline-primary mt-1">Log in</a>
+          <h4 class="card-title mt-2">Sign up</h4>
+        </header>
+        <article class="card-body mx-auto">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <form>
+              <div class="form-row">
+                <div class="col form-group">
+                  <label>First name</label>
+                  <%= f.text_field :name, required: true, :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+                <div class="col form-group">
+                  <label>Last name</label>
+                  <%= f.text_field :last_name, required: true, :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+              </div> <!-- form-row end.// -->
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <div class="form-group">
+                <label class="form-check form-check-inline">
+                  <%= f.radio_button :is_male, true, :checked => true, :value => true, :class => "form-check-input" %>
+                  <span class="form-check-label"> Male </span>
+                </label>
+                <label class="form-check form-check-inline">
+                  <%= f.radio_button :is_male, false, :checked => true, :value => false, :class => "form-check-input" %>
+                  <span class="form-check-label"> Female</span>
+                </label>
+              </div> <!-- form-group end.// -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>City</label>
+                  <%= f.text_field :city, required: true, :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+                <div class="form-group col-md-6">
+                  <label>Country</label>
+                  <select id="inputState" class="form-control">
+                    <option> Choose...</option>
+                    <option>Uzbekistan</option>
+                    <option>Russia</option>
+                    <option selected="">United States</option>
+                    <option>India</option>
+                    <option>Afganistan</option>
+                  </select>
+                </div> <!-- form-group end.// -->
+              </div> <!-- form-row.// -->
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label>Address</label>
+                  <%= f.text_field :street, required: true, :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+                <div class="form-group col-md-6">
+                  <label>Zip</label>
+                  <%= f.text_field :zip, required: true, :class => "form-control", :placeholder => "" %>
+                </div> <!-- form-group end.// -->
+              </div> <!-- form-row.// -->
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <select disabled class="custom-select" style="max-width: 120px;">
+                  <option selected="">+34</option>
+                  <option value="1">+972</option>
+                </select>
+                <%= f.text_field :phone, required: true, :class => "form-control", :placeholder => "" %>
+              </div> <!-- form-group// -->
+
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-at"></i> </span>
+                </div>
+                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", :class => "form-control", :placeholder => "Email address" %>
+              </div> <!-- form-group// -->
+
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <%= f.password_field :password, required: true, autocomplete: "new-password", :class => "form-control input-lg", :placeholder => "Create password" %>
+              </div> <!-- form-group// -->
+              <div class="form-group input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", :class => "form-control input-lg", :placeholder => "Repeat password"%>
+              </div> <!-- form-group// -->
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Register</button>
+              </div> <!-- form-group// -->
+              <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of
+                use and Privacy Policy.
+              </small>
+            </form>
+          <% end %>
+        </article> <!-- card-body end .// -->
+        <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
+      </div>
+
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</section>
