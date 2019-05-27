@@ -1,1 +1,10 @@
-<h1>Products</h1>
+<h1>All categories</h1>
+
+<ol>
+  <% @categories.each do |category| %>
+  <li>
+    <%= category.title %>
+  </li>
+  <% end %>
+
+</ol>
