@@ -23,46 +23,102 @@
   </div>
 <% end %>
 
-<!--Navbar-->
-<nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
-  <div class="container-fluid">
-    <div class="col-lg-3">
-      <div class="brand-wrap">
-        <img class="logo" src="../assets/logo-dark.png">
-        <a class="navbar-brand" href="/">
-          <h2 class="logo-text">LOGO</h2>
-        </a>
-      </div> <!-- brand-wrap.// -->
-    </div>
+<header class="section-header">
+  <nav class="navbar navbar-top navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTop">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"> <i class="fa fa-phone"></i> Call us: 020 2366 455 </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> USD </a>
+            <ul class="dropdown-menu small">
+              <li><a class="dropdown-item" href="#">EUR</a></li>
+              <li><a class="dropdown-item" href="#">USD</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Language </a>
+            <ul class="dropdown-menu small">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">Spanish</a></li>
+              <li><a class="dropdown-item" href="#">Catalan </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li><%= link_to "Shop", products_path, class: "nav-link" %></li>
+          <li><%= link_to "About us", welcome_path, class: "nav-link" %></li>
+        </ul> <!-- list-inline //  -->
+      </div> <!-- navbar-collapse .// -->
+    </div> <!-- container //  -->
+  </nav>
 
-    <% if user_signed_in? %>
-      <div class="btn-group nav-item">
-        <button type="button" class="btn btn-success dropdown-toggle padding-ri" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= "Hola, " + current_user.name %>
-        </button>
-        <div class="dropdown-menu">
-          <%= link_to 'Editar perfil', edit_user_registration_path, class: "dropdown-item" %>
-          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+  <section class="header-main">
+    <div class="container">
+      <div class="row align-items-lg-start">
+        <div class="col-lg-5-24 col-sm-5 col-4">
+          <div class="brand-wrap">
+            <img class="logo" src="../assets/logo-dark.png">
+            <h2 class="logo-text">LOGO</h2>
+          </div> <!-- brand-wrap.// -->
         </div>
 
-      </div>
-    <% else %>
-      <form class="form-inline nav-item">
-        <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-primary", role: "button" %>
-        <div style="padding-left: 10px;">
-          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-success", role: "button" %>
+        <div class="col-lg-13-24 col-sm-12 order-3 order-lg-2">
+          <!-- search empty-->
         </div>
-      </form>
-    <% end %>
-  </div>
-</nav>
 
+        <div class="col-lg-6-24 col-sm-7 col-8  order-3 order-lg-3">
+          <div class="d-flex justify-content-end">
+            <% if user_signed_in? %>
+              <div class="widget-header">
+                <div class="icontext">
+                  <div class="text-wrap dropdown">
+                    <small><%= "Welcome " + current_user.name %></small>
+                    <a href="#" class="b" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
+                      My account <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <%= link_to 'Editar perfil', edit_user_registration_path, class: "dropdown-item" %>
+                      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                    </div>
+                  </div> <!-- text-wrap.// -->
+                </div>
+              </div>
+            <% else %>
+              <div class="widget-header">
+                <small class="title text-muted">Welcome guest!</small>
+                <div>
+                  <%= link_to "Login in", new_user_session_path, class: "dark-transp", role: "button" %> | </span>
+                  <%= link_to "Register", new_user_registration_path, class: "dark-transp", role: "button" %>
+                </div>
+              </div>
+            <% end %>
+
+            <a href="#" class="widget-header border-left pl-3 ml-3">
+              <div class="icontext">
+                <div class="icon-wrap icon-sm round border"><i class="fa fa-shopping-cart"></i></div>
+              </div>
+              <span class="badge badge-pill badge-danger notify">0</span>
+            </a>
+
+          </div> <!-- widgets-wrap.// -->
+        </div> <!-- col.// -->
+      </div> <!-- row.// -->
+    </div> <!-- container.// -->
+  </section> <!-- header-main .// -->
+
+</header>
 
 <%= yield(:header) %>
 
+
 <%= yield %>
 
-</div>
 <script>
     window.setTimeout(function () {
         $(".alert").fadeTo(500, 0).slideUp(500, function () {
