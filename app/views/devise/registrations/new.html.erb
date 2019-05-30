@@ -1,7 +1,7 @@
 <section class="section" xmlns="http://www.w3.org/1999/html">
   <div class="container">
-    <div class="columns center-x padding-top padding-bottom">
-      <div class="card" style="width: 40rem;">
+    <div class="mx-auto col-md-9 padding-bottom padding-top">
+      <div class="card" style="width: auto">
         <header class="card-header">
           <a><%= link_to "Log in", new_session_path(resource_name), :class => "float-right btn btn-outline-primary mt-1" %></a>
           <h4 class="card-title mt-2">Sign up</h4>
@@ -22,8 +22,10 @@
                     <%= f.text_field :name, required: true, :class => "form-control", :placeholder => "First name", :type => "text" %>
                   </div> <!-- form-group// -->
                 </div>
+              </div>
 
 
+              <div class="form-row">
                 <div class="col form-group">
                   <div class="form-group input-group">
                     <div class="input-group-prepend">

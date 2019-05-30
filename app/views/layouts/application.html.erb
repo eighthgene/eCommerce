@@ -24,9 +24,8 @@
 <% end %>
 
 <!--Navbar-->
-<nav class="navbar navbar-light bg-light sticky-top">
-  <div class="container">
-
+<nav class="navbar navbar-light navbar-expand-md bg-light sticky-top">
+  <div class="container-fluid">
     <div class="col-lg-3">
       <div class="brand-wrap">
         <img class="logo" src="../assets/logo-dark.png">
@@ -37,7 +36,7 @@
     </div>
 
     <% if user_signed_in? %>
-      <div class="btn-group">
+      <div class="btn-group nav-item">
         <button type="button" class="btn btn-success dropdown-toggle padding-ri" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= "Hola, " + current_user.name %>
         </button>
@@ -48,7 +47,7 @@
 
       </div>
     <% else %>
-      <form class="form-inline">
+      <form class="form-inline nav-item">
         <%= link_to "Sign In", new_user_session_path, class: "btn btn-outline-primary", role: "button" %>
         <div style="padding-left: 10px;">
           <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-success", role: "button" %>
@@ -59,8 +58,8 @@
 </nav>
 
 
-
 <%= yield(:header) %>
+
 <%= yield %>
 
 </div>
