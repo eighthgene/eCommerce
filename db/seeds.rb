@@ -17,6 +17,8 @@ c7 = Category.create(title: "Category 7")
 c8 = Category.create(title: "Category 8")
 
 Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c1.id)
+Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c1.id)
+Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c1.id)
 Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c2.id)
 Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c3.id)
 Product.create(title: "Samareta Marvel", description: "Iron man", price: 20.5, image: "http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/beach01.jpg", category_id: c4.id)

@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2019_05_27_170526) do
     t.text "description"
     t.decimal "price", precision: 10, scale: 2
     t.string "image"
+    t.integer "orders", default: 0
+    t.integer "views", default: 0
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

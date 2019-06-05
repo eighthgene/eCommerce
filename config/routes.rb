@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'welcome', to: 'pages#index'
 
   get 'categories', to: 'categories#index'
-  #get '/categories/:id', to: 'categories#show', as: 'category'
+  get '/products/:id', to: 'products#show', as: 'product'
   #
 
   resources :categories, only: [:index] do
