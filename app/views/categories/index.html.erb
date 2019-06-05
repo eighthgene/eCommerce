@@ -50,26 +50,31 @@
         <aside class="col-lg-5-24">
           <nav>
             <div class="title-category bg-secondary white d-none d-lg-block" style="margin-top:-53px">
-              <span>Categories</span>
+              <span>Categories (<%= @categories.length %>)</span>
             </div>
             <ul class="menu-category">
-              <li><a href="#">Food &amp Beverage </a></li>
-              <li><a href="#">Home Equipments </a></li>
-              <li><a href="#">Machinery Items </a></li>
-              <li><a href="#">Toys & Hobbies </a></li>
-              <li><a href="#">Beauty & Personal Care </a></li>
-              <li><a href="#">Mobile phones </a></li>
-              <li class="has-submenu"><a href="#">More category <i class="icon-arrow-right pull-right"></i></a>
-                <ul class="submenu">
-                  <li><a href="#">Food &amp Beverage </a></li>
-                  <li><a href="#">Home Equipments </a></li>
-                  <li><a href="#">Machinery Items </a></li>
-                  <li><a href="#">Toys & Hobbies </a></li>
-                  <li><a href="#">Consumer Electronics </a></li>
-                  <li><a href="#">Home & Garden </a></li>
-                  <li><a href="#">Beauty & Personal Care </a></li>
-                </ul>
-              </li>
+              <% @categories.first(6).each do |category| %>
+                <li>
+                  <%= link_to category_products_path(category) do %>
+                    <%= category.title %>
+                  <% end %>
+                </li>
+              <% end %>
+
+              <% if @categories.length > 6 %>
+                <li class="has-submenu"><a href="#">More category <i class="icon-arrow-right pull-right"></i></a>
+                  <ul class="submenu">
+                    <% @categories[6..].each do |category| %>
+                      <li>
+                        <%= link_to category_products_path(category) do %>
+                          <%= category.title %>
+                        <% end %>
+                      </li>
+                    <% end %>
+
+                  </ul>
+                </li>
+              <% end %>
             </ul>
           </nav>
         </aside> <!-- col.// -->
