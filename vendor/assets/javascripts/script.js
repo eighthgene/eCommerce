@@ -1,7 +1,7 @@
 // some scripts
 
 // jquery ready start
-$(document).ready(function() {
+$( document ).on('turbolinks:load', function() {
 	// jQuery code
 
 
