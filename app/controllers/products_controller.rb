@@ -1,9 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    #@categories = Category.all
-    @categories = Category.joins(:products)
-                          .select('categories.*, count(products.id) as products_count')
-                          .group('categories.id')
-                          .order(:title)
+    @category = Category.find(params[:category_id])
+    @products = @category.products.order(:title)
   end
 end

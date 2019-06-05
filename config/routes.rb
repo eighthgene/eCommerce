@@ -3,7 +3,14 @@ Rails.application.routes.draw do
       registrations: 'registrations'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'products#index'
+  root 'categories#index'
   get 'welcome', to: 'pages#index'
-  get 'products', to: 'products#index'
+
+  get 'categories', to: 'categories#index'
+  #get '/categories/:id', to: 'categories#show', as: 'category'
+  #
+
+  resources :categories, only: [:index] do
+    resources :products, only: [:index]
+  end
 end

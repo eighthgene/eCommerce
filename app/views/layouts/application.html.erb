@@ -51,7 +51,7 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <li><%= link_to "Shop", products_path, class: "nav-link" %></li>
+          <li><%= link_to "Shop", categories_path, class: "nav-link" %></li>
           <li><%= link_to "About us", welcome_path, class: "nav-link" %></li>
         </ul> <!-- list-inline //  -->
       </div> <!-- navbar-collapse .// -->
@@ -63,7 +63,7 @@
       <div class="row align-items-lg-start">
         <div class="col-lg-5-24 col-sm-5 col-4">
           <div class="brand-wrap">
-            <img class="logo" src="../assets/logo-dark.png">
+            <img class="logo" src="/assets/logo-dark.png">
             <h2 class="logo-text">LOGO</h2>
           </div> <!-- brand-wrap.// -->
         </div>
@@ -74,50 +74,21 @@
 
         <div class="col-lg-6-24 col-sm-7 col-8  order-3 order-lg-3">
           <div class="d-flex justify-content-end">
-            <% if user_signed_in? %>
-              <div class="widget-header">
-                <div class="icontext">
-                  <div class="text-wrap dropdown">
-                    <small><%= "Welcome " + current_user.name %></small>
-                    <a href="#" class="b" data-toggle="dropdown" data-offset="20,10" aria-expanded="false">
-                      My account <i class="fa fa-caret-down"></i>
-                    </a>
-                    <div class="dropdown-menu">
-                      <%= link_to 'Editar perfil', edit_user_registration_path, class: "dropdown-item" %>
-                      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                    </div>
-                  </div> <!-- text-wrap.// -->
-                </div>
-              </div>
-            <% else %>
-              <div class="widget-header">
-                <small class="title text-muted">Welcome guest!</small>
-                <div>
-                  <%= link_to "Login in", new_user_session_path, class: "dark-transp", role: "button" %> | </span>
-                  <%= link_to "Register", new_user_registration_path, class: "dark-transp", role: "button" %>
-                </div>
-              </div>
-            <% end %>
-
-            <a href="#" class="widget-header border-left pl-3 ml-3">
-              <div class="icontext">
-                <div class="icon-wrap icon-sm round border"><i class="fa fa-shopping-cart"></i></div>
-              </div>
-              <span class="badge badge-pill badge-danger notify">0</span>
-            </a>
-
+            <%= render '/layouts/user_widget_status' %>
           </div> <!-- widgets-wrap.// -->
         </div> <!-- col.// -->
+
       </div> <!-- row.// -->
     </div> <!-- container.// -->
   </section> <!-- header-main .// -->
 
 </header>
 
-<%= yield(:header) %>
+<div class="container-fluid" style="margin-top: 3%;">
 
+  <%= yield %>
 
-<%= yield %>
+</div>
 
 <script>
     window.setTimeout(function () {
