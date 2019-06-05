@@ -5,6 +5,7 @@
     <% @categories.each do |category| %>
       <li>
         <%= category.title %>
+        (<%= category.products_count %> products)
       </li>
     <% end %>
 
