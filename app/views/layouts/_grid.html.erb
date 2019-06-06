@@ -1,0 +1,32 @@
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-md-4">
+      <figure class="card card-product">
+        <div class="img-wrap">  <%= link_to(image_tag(product.image), product_path(product), :class => "img-md") %></div>
+        <figcaption class="info-wrap">
+          <h4 class="title"><%= product.title %></h4>
+          <p class="desc"><%= product.description %></p>
+          <div class="rating-wrap">
+            <ul class="rating-stars">
+              <li style="width:80%" class="stars-active">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </li>
+              <li>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </li>
+            </ul>
+            <div class="label-rating"><%= product.views %> views</div>
+            <div class="label-rating"><%= product.orders %> orders</div>
+          </div> <!-- rating-wrap.// -->
+        </figcaption>
+        <div class="bottom-wrap">
+          <%= link_to 'Order Now', product_path(product), :class => "btn btn-sm btn-primary float-right" %>
+          <div class="price-wrap h5">
+            <span class="price-new"><%= number_to_currency product.price %></span>
+            <del class="price-old">$1980</del>
+          </div> <!-- price-wrap.// -->
+        </div> <!-- bottom-wrap.// -->
+      </figure>
+    </div> <!-- col // -->
+  <% end %>
+</div>
