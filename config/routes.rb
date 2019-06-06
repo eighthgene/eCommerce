@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get 'categories', to: 'categories#index'
   get '/products/:id', to: 'products#show', as: 'product'
 
+  #Cart
+  get '/cart', to: 'order_items#index'
+  resources :order_items, path: '/cart/items'
+
   resources :categories, only: [:index] do
     resources :products, only: [:index]
   end
