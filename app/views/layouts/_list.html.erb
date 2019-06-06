@@ -1,0 +1,33 @@
+<div class="card">
+  <% @products.each do |product| %>
+    <article class="itemlist">
+      <div class="row row-sm">
+        <aside class="col-sm-3">
+          <div class="img-wrap">  <%= link_to(image_tag(product.image), product_path(product), :class => "img-md") %></div>
+        </aside> <!-- col.// -->
+        <div class="col-sm-6">
+          <div class="text-wrap">
+            <h4 class="title"> <%= product.title %></h4>
+            <p> <%= product.description %> </p>
+            <p class="rating-wrap my-0 text-muted">
+              <span class="label-rating"><%= product.views %> views</span>
+              <span class="label-rating"><%= product.orders %> orders</span>
+            </p> <!-- rating-wrap.// -->
+          </div> <!-- text-wrap.// -->
+        </div> <!-- col.// -->
+        <aside class="col-sm-3">
+          <div class="border-left pl-3">
+            <div class="price-wrap">
+              <span class="h3 price"> <%= number_to_currency product.price %> </span>
+              <del class="price-old"> $98</del>
+            </div> <!-- info-price-detail // -->
+            <p class="text-success">Free shipping</p>
+            <p>
+              <%= link_to 'Order Now', product_path(product), :class => "btn btn-primary " %>
+            </p>
+          </div> <!-- action-wrap.// -->
+        </aside> <!-- col.// -->
+      </div> <!-- row.// -->
+    </article> <!-- itemlist.// -->
+  <% end %>
+</div>

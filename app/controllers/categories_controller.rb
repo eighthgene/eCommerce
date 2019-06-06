@@ -5,5 +5,6 @@ class CategoriesController < ApplicationController
                       .select('categories.*, count(products.id) as products_count')
                       .group('categories.id')
                       .order(:title)
+
   end
 end
