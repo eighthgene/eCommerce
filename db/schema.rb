@@ -19,16 +19,17 @@ ActiveRecord::Schema.define(version: 2019_05_27_170526) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.integer "quantity", default: 0, null: false
-    t.decimal "price", precision: 10, scale: 2, null: false
+    t.integer "product_id"
     t.integer "order_id"
+    t.integer "quantity", default: 0, null: false
+    t.float "unit_price", null: false
+    t.float "total_price", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["order_id"], name: "index_order_items_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.decimal "sub_total", precision: 10, scale: 2, null: false
+    t.float "subtotal", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,7 +37,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_170526) do
   create_table "products", force: :cascade do |t|
     t.string "title", null: false
     t.text "description"
-    t.decimal "price", precision: 10, scale: 2
+    t.float "price"
     t.string "image"
     t.integer "orders", default: 0
     t.integer "views", default: 0
