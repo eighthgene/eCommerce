@@ -23,10 +23,4 @@
   </div>
 <% end %>
 
-
-<%= link_to carts_path, class: "widget-header border-left pl-3 ml-3" do %>
-  <div class="icontext">
-    <div class="icon-wrap icon-sm round border"><i class="fa fa-shopping-cart"></i></div>
-  </div>
-  <span class="badge badge-pill badge-danger notify"><%= current_order.order_items.size %></span>
-<% end %>
+<div class="active cart"><%= render 'layouts/shopping_basket' %></div>

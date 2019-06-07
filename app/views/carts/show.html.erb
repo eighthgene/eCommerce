@@ -7,104 +7,97 @@
 <% end %>
 
 
-<% if @order_items.size > 0 %>
-  <section class="section-content padding-y border-top">
 
-    <div class="container">
-      <div class="row">
-        <main class="col-sm-9">
+<section class="section-content padding-y border-top">
 
-          <div id="code_cart">
-            <div class="card">
-              <table class="table table-hover shopping-cart-wrap">
-                <thead class="text-muted">
-                <tr>
-                  <th scope="col">Product</th>
-                  <th scope="col" width="120">Quantity</th>
-                  <th scope="col" width="120">Price</th>
-                  <th scope="col" width="200" class="text-right">Action</th>
-                </tr>
-                </thead>
 
-                <tbody>
-                <% @order_items.each do |item| %>
-                  <tr>
-                    <td>
-                      <figure class="media">
-                        <div class="img-wrap"><img src="/assets/items/3.jpg" class="img-thumbnail img-sm"></div>
-                        <figcaption class="media-body">
-                          <h6 class="title text-truncate"><%= item.product.title %> </h6>
-                          <dl class="dlist-inline small">
-                            <dt>Size:</dt>
-                            <dd>XXL</dd>
-                          </dl>
-                          <dl class="dlist-inline small">
-                            <dt>Color:</dt>
-                            <dd>Orange color</dd>
-                          </dl>
-                        </figcaption>
-                      </figure>
-                    </td>
-                    <%= form_for(item, remote: true) do |f| %>
-                      <%= f.hidden_field :product_id, value: item.product.id %>
-                      <td>
-                        <%= f.select :quantity, ((1..10).map {|i| [i, i]}), {}, {:class => "form-control"} %>
-                      </td>
-                      <td>
-                        <div class="price-wrap">
-                          <var class="price"><%= number_to_currency item.total_price %></var>
-                          <small class="text-muted">(<%= number_to_currency item.product.price %> each)</small>
-                        </div> <!-- price-wrap .// -->
-                      </td>
-                      <td class="text-right">
+  <div class="container">
+    <!-- path -->
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3-24"><strong>Your are here:</strong></div> <!-- col.// -->
+          <div class="col-md-18-24">
+            <ul class="list-inline">
+              <%= link_to "Home", root_path %> / Cart
 
-                        <a><%= f.submit "Update", class: 'btn btn-outline-success' %></a>
-                        <%= link_to " × Remove", item, method: :delete, remote: true, class: 'btn btn-outline-danger btn-round' %>
-                      </td>
-                    <% end %>
-                  </tr>
-                <% end %>
-                </tbody>
-              </table>
-            </div> <!-- card.// -->
-          </div>
 
-        </main>
-        <aside class="col-sm-3">
-          <p class="alert alert-success">Add USD 5.00 of eligible items to your order to qualify for FREE Shipping. </p>
-          <dl class="dlist-align">
-            <dt>Total price:</dt>
-            <dd class="text-right">USD 568</dd>
-          </dl>
-          <dl class="dlist-align">
-            <dt>Discount:</dt>
-            <dd class="text-right">USD 658</dd>
-          </dl>
-          <dl class="dlist-align h4">
-            <dt>Total:</dt>
-            <dd class="text-right"><strong><%= number_to_currency current_order.subtotal %></strong></dd>
-          </dl>
-          <hr>
-          <figure class="itemside mb-3">
-            <aside class="aside"><img src="images/icons/pay-visa.png"></aside>
-            <div class="text-wrap small text-muted">
-              Pay 84.78 AED ( Save 14.97 AED )
-              By using ADCB Cards
-            </div>
-          </figure>
-          <figure class="itemside mb-3">
-            <aside class="aside"><img src="images/icons/pay-mastercard.png"></aside>
-            <div class="text-wrap small text-muted">
-              Pay by MasterCard and Save 40%. <br>
-              Lorem ipsum dolor
-            </div>
-          </figure>
-
-        </aside> <!-- col.// -->
+            </ul>
+          </div> <!-- col.// -->
+        </div> <!-- row.// -->
       </div>
     </div>
-  </section>
+    <div class="row padding-top">
+      <main class="col-sm-9">
 
-<% else %>
+        <div id="code_cart">
+          <div class="card">
+            <table class="table shopping-cart-wrap">
+              <thead class="text-muted">
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col" width="120">Quantity</th>
+                <th scope="col" width="120">Price</th>
+                <th scope="col" width="200" class="text-right">Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% if @order_items.size > 0 %>
+                <div class="cart_item">
+                  <%= render 'carts/cart_item' %>
+                </div>
+              <% else %>
+                <tr>
+                  <th></th>
+                  <th>
+                    <div class="align-content-center padding-top">
+                      <%= image_tag('empty-cart') %>
+                    </div>
+                    <br class="row-sm">
+                    <p class="text-primary text-center">Empty card</p>
+                  </th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div> <!-- card.// -->
+        </div>
 
-<% end %>
+      </main>
+      <aside class="col-sm-3">
+        <dl class="dlist-align">
+          <dt>Total price:</dt>
+          <dd class="text-right">USD 0</dd>
+        </dl>
+        <dl class="dlist-align">
+          <dt>Discount:</dt>
+          <dd class="text-right">USD 0</dd>
+        </dl>
+        <dl class="dlist-align h4">
+          <dt>Total:</dt>
+          <dd class="text-right"><strong><%= number_to_currency current_order.subtotal %></strong></dd>
+        </dl>
+        <hr>
+        <figure class="itemside mb-3">
+          <aside class="aside"><img src="images/icons/pay-visa.png"></aside>
+          <div class="text-wrap small text-muted">
+            Pay 84.78 AED ( Save 14.97 AED )
+            By using ADCB Cards
+          </div>
+        </figure>
+        <figure class="itemside mb-3">
+          <aside class="aside"><img src="images/icons/pay-mastercard.png"></aside>
+          <div class="text-wrap small text-muted">
+            Pay by MasterCard and Save 40%. <br>
+            Lorem ipsum dolor
+          </div>
+        </figure>
+      </aside> <!-- col.// -->
+    </div>
+  </div>
+</section>
+
+
+

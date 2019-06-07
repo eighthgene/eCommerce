@@ -1,0 +1,48 @@
+<% @order_items.each do |item| %>
+  <tr>
+    <td>
+      <figure class="media">
+        <div class="img-wrap">
+          <%= image_tag(item.product.image, :class => "img-thumbnail img-sm") %>
+        </div>
+
+        <figcaption class="media-body">
+          <h6 class="title text-truncate"><%= item.product.title %> </h6>
+          <dl class="dlist-inline small">
+            <dt>Size:</dt>
+            <dd>XXL</dd>
+          </dl>
+          <dl class="dlist-inline small">
+            <dt>Color:</dt>
+            <dd>Orange color</dd>
+          </dl>
+        </figcaption>
+      </figure>
+    </td>
+    <%= form_for(item, remote: true) do |f| %>
+      <%= f.hidden_field :product_id, value: item.product.id %>
+
+      <% if false %>
+        <td>
+          <%= f.select :quantity, ((1..10).map {|i| [i, i]}), {}, {:class => "form-control"} %>
+        </td>
+      <% end %>
+      <td class="text-left">
+        <%= item.quantity %> items
+      </td>
+
+      <td>
+        <div class="price-wrap">
+          <var class="price"><%= number_to_currency item.total_price %></var>
+          <small class="text-muted">(<%= number_to_currency item.product.price %> each)</small>
+        </div> <!-- price-wrap .// -->
+      </td>
+      <td class="text-right">
+        <% if false %>
+          <a><%= f.submit "Update", class: 'btn btn-outline-success' %></a>
+        <% end %>
+        <%= link_to " × Remove", item, method: :delete, remote: true, class: 'btn btn-outline-danger btn-round' %>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
