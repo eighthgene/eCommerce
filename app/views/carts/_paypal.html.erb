@@ -24,6 +24,9 @@
                 .then(function (res) {
 // 3. Show the buyer a confirmation message.
                     window.alert('Payment Complete!');
+                    setTimeout(function () {
+                        window.location.href = "<%= root_path %>"; //will redirect to your blog page (an ex: blog.html)
+                    }, 4000); //will call the function after 2 secs.
                 });
         }
     }, '#paypal-button');
