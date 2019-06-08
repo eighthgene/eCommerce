@@ -1,0 +1,36 @@
+<div class="tab-pane fade active show" id="nav-tab-paypal">
+  <div id="paypal-button"></div>
+  <hr>
+  <p><strong>Note:</strong> Payment commission is included in the price. </p>
+</div>
+
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+    paypal.Button.render({
+        env: 'sandbox', // Or 'production'
+// Set up the payment:
+// 1. Add a payment callback
+        payment: function (data, actions) {
+// 2. Make a request to your server
+            return actions.request.post('/createpayment')
+                .then(function (res) {
+// 3. Return res.id from the response
+                    console.log("Result: " + res.id);
+                    return res.id;
+                });
+        },
+// Execute the payment:
+// 1. Add an onAuthorize callback
+        onAuthorize: function (data, actions) {
+// 2. Make a request to your server
+            return actions.request.post('/executepayment', {
+                paymentID: data.paymentID,
+                payerID: data.payerID
+            })
+                .then(function (res) {
+// 3. Show the buyer a confirmation message.
+                    window.alert('Payment Complete!');
+                });
+        }
+    }, '#paypal-button');
+</script>

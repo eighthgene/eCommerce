@@ -9,9 +9,13 @@ Rails.application.routes.draw do
   get 'categories', to: 'categories#index'
   get '/products/:id', to: 'products#show', as: 'product'
 
-  #Cart
+  # Cart and order
   resources :order_items
   resource :carts, only: [:show]
+
+  # Payment by PayPal
+  post '/createpayment', to: 'carts#createpayment'
+  post '/executepayment', to: 'carts#executepayment'
 
   resources :categories, only: [:index] do
     resources :products, only: [:index]

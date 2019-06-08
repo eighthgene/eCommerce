@@ -15,6 +15,7 @@ class OrderItemsController < ApplicationController
   end
 
   def destroy
+    flash[:error] = "Destroyed"
     @order = current_order
     @order_item = @order.order_items.find(params[:id])
     @order_item.destroy
