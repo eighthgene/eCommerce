@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8239e3ba-c686-4c26-ad69-c6e3e264b6d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/dragonball1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/dragonball2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/dragonball3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/dragonball4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/gamethrones1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/gamethrones2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/gamethrones3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/gamethrones4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/harrypotter1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/harrypotter2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/harrypotter3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/jurassic1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/jurassic2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/jurassic3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/pokemon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/pokemon2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/pokemon3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/pokemon4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/pokemon5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/señoranillos1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/señoranillos2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/señoranillos3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/starwars1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/starwars2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/starwars3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/starwars4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/walkingdead1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/walkingdead2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/products/walkingdead3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/categories_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/categories_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/order_items_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/categories/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/categories/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/_list.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_list.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -92,11 +55,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/seeds.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="378">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/carts/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -192,7 +173,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/views/carts/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/carts/_paypal.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20190527170515_create_orders.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
@@ -206,12 +186,13 @@
         <option value="$PROJECT_DIR$/app/controllers/categories_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/products/all.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/categories/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/order_items_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/products/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/categories/index.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
+        <option value="$PROJECT_DIR$/app/views/carts/show.html.erb" />
       </list>
     </option>
   </component>
@@ -263,6 +244,13 @@
               <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eCommerce" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="carts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eCommerce" type="b2602c69:ProjectViewProjectNode" />
@@ -478,7 +466,7 @@
       <workItem from="1559946904120" duration="4972000" />
       <workItem from="1559990801657" duration="24239000" />
       <workItem from="1560110805490" duration="382000" />
-      <workItem from="1560165430402" duration="29026000" />
+      <workItem from="1560165430402" duration="31032000" />
     </task>
     <task id="LOCAL-00001" summary="add info page and init product page">
       <created>1558640415645</created>
@@ -676,17 +664,31 @@
       <option name="project" value="LOCAL" />
       <updated>1560176120419</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="modify home page view + add new sort product(populars, newest) + add flash messages">
+      <created>1560205963566</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1560205963566</updated>
+    </task>
+    <task id="LOCAL-00030" summary="bug fix">
+      <created>1560207320315</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1560207320315</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194108000" />
+    <option name="totallyTimeSpent" value="196114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="925" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26286662" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20199226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -698,8 +700,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32788944" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4991699" weight="0.28015074" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32788944" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4991699" weight="0.27889448" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008301" side_tool="true" weight="0.3253769" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32914573" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -796,19 +798,14 @@
     <MESSAGE value="check if user is login in before pay" />
     <MESSAGE value="add redirect after payment finished" />
     <MESSAGE value="add status and user id to orders after user paid" />
-    <option name="LAST_COMMIT_MESSAGE" value="add status and user id to orders after user paid" />
+    <MESSAGE value="modify home page view + add new sort product(populars, newest) + add flash messages" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/eCommerce@Development__eCommerce.rcov" NAME="Development: eCommerce Coverage Results" MODIFIED="1560195495862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="eCommerce" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/carts/_paypal.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="28" column="68" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/carts/_cart_item.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -991,13 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="42" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1080,10 +1070,24 @@
     <entry file="file://$PROJECT_DIR$/app/assets/images/products/starwars4.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="119" column="65" selection-start-line="119" selection-start-column="65" selection-end-line="119" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="378">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/carts/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
         </state>
       </provider>
     </entry>
