@@ -6,5 +6,8 @@ class CategoriesController < ApplicationController
                       .group('categories.id')
                       .order(:title)
 
+    @top_viewed = Product.order('views DESC').first(10)
   end
+
+
 end

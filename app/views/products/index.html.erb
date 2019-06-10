@@ -1,4 +1,4 @@
-<div class="container padding-top">
+<div class="container padding-top padding-bottom">
 
   <div class="card">
     <div class="card-body">
@@ -6,13 +6,24 @@
         <div class="col-md-3-24"><strong>Your are here:</strong></div> <!-- col.// -->
         <div class="col-md-18-24">
           <ul class="list-inline">
-            <%= link_to "Categories", root_path %> /
-            <%= @category.title %>
+            <% if @category.nil? %>
+              <%= link_to "Home", root_path %> /
+              <%= @type %>
+            <% else %>
+              <%= link_to "Home", root_path %> /
+              <%= @category.title %>
+            <% end %>
+
           </ul>
         </div> <!-- col.// -->
         <div class="col-md-3-24 text-right">
-          <%= link_to "", category_products_path(view: "/layouts/list"), :class=>"fa fa-bars" %>
-          <%= link_to "", category_products_path(view: "/layouts/grid"), :class=>"fa fa-th" %>
+          <% if @categies.nil? %>
+            <%= link_to "", {:controller => "products", :action => :index, :select_param => @select_param, view: "/layouts/list"}, :class => "fa fa-bars" %>
+            <%= link_to "", {:controller => "products", :action => :index, :select_param => @select_param, view: "/layouts/grid"}, :class => "fa fa-th" %>
+          <% else %>
+            <%= link_to "", category_products_path(view: "/layouts/list"), :class => "fa fa-bars" %>
+            <%= link_to "", category_products_path(view: "/layouts/grid"), :class => "fa fa-th" %>
+          <% end %>
         </div> <!-- col.// -->
       </div> <!-- row.// -->
     </div>

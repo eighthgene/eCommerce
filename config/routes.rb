@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'categories', to: 'categories#index'
   get '/products/:id', to: 'products#show', as: 'product'
+  get '/products', to: 'products#index'
+
 
   # Cart and order
   resources :order_items
