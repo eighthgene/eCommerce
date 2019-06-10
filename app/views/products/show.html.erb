@@ -36,7 +36,7 @@
 
               <div class="mb-3">
                 <var class="price h3 text-warning">
-                  <span class="num"><%= number_to_currency @product.price %></span>
+                  <span class="num"><%= number_to_currency(@product.price, :unit => "€") %></span>
                 </var>
                 <span>/per unit</span>
               </div> <!-- price-detail-wrap .// -->

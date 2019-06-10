@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(version: 2019_05_27_170526) do
 
   create_table "orders", force: :cascade do |t|
     t.float "subtotal", null: false
+    t.boolean "is_paid", default: false
+    t.integer "status", default: 0
+    t.integer "user_id", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

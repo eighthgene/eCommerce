@@ -38,11 +38,11 @@
 
               <div class="form-group">
                 <label class="form-check form-check-inline">
-                  <%= f.radio_button :is_male, true, :checked => true, :value => true, :class => "form-check-input" %>
+                  <%= f.radio_button :is_male, true, :checked => false, :value => true, :class => "form-check-input", required: true %>
                   <span class="form-check-label"> Male </span>
                 </label>
                 <label class="form-check form-check-inline">
-                  <%= f.radio_button :is_male, false, :checked => true, :value => false, :class => "form-check-input" %>
+                  <%= f.radio_button :is_male, false, :checked => false, :value => false, :class => "form-check-input" %>
                   <span class="form-check-label"> Female</span>
                 </label>
               </div> <!-- form-group end.// -->
