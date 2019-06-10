@@ -30,39 +30,40 @@
 
           <div id="code_cart">
             <div class="card">
-              <table class="table table-responsive shopping-cart-wrap">
-                <thead class="text-muted">
-                <tr>
-                  <th scope="col">Product</th>
-                  <th scope="col" width="120">Quantity</th>
-                  <th scope="col" width="120">Price</th>
-                  <th scope="col" width="200" class="text-right">Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% if @order_items.size > 0 %>
-                  <div class="cart_item">
-                    <%= render 'carts/cart_item' %>
-                  </div>
-                <% else %>
+              <div class="table-responsive">
+                <table class="table shopping-cart-wrap">
+                  <thead class="text-muted">
                   <tr>
-                    <th></th>
-                    <th>
-                      <div class="align-content-center padding-top">
-                        <%= image_tag('empty-cart') %>
-                      </div>
-                      <br class="row-sm">
-                      <p class="text-primary text-center">Empty Cart</p>
-                    </th>
-                    <th></th>
-                    <th></th>
+                    <th scope="col">Product</th>
+                    <th scope="col" width="120">Quantity</th>
+                    <th scope="col" width="120">Price</th>
+                    <th scope="col" width="200" class="text-right">Action</th>
                   </tr>
-                <% end %>
-                </tbody>
-              </table>
-            </div> <!-- card.// -->
+                  </thead>
+                  <tbody>
+                  <% if @order_items.size > 0 %>
+                    <div class="cart_item">
+                      <%= render 'carts/cart_item' %>
+                    </div>
+                  <% else %>
+                    <tr>
+                      <th></th>
+                      <th>
+                        <div class="align-content-center padding-top">
+                          <%= image_tag('empty-cart') %>
+                        </div>
+                        <br class="row-sm">
+                        <p class="text-primary text-center">Empty Cart</p>
+                      </th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+              </div> <!-- card.// -->
+            </div>
           </div>
-
         </main>
         <aside class="col-sm-3">
           <dl class="dlist-align">

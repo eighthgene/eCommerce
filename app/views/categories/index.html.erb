@@ -116,7 +116,7 @@
 
           <div class="img-wrap"><%= link_to(image_tag(p.image), product_path(p), :alt => "Avatar", :style => "width:100%") %></div>
           <figcaption class="info-wrap">
-            <h4 class="title"><%= p.title %></h4>
+            <h4 class="title text-nowrap"><%= p.title %></h4>
             <p class="desc"><%= truncate(p.description, length: 60) %></p>
             <div class="rating-wrap">
               <div class="label-rating"><%= p.views %> views</div>
