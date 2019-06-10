@@ -36,7 +36,7 @@ Product.create(title: "Stark house", description: "Short sleeve t-shirt made of 
 
 
 Product.create(title: "Daenerys Dragones", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with Game of Thrones design of the silhouettes of Daenerys and dragons.",
-               price: 11.90, image: "products/gamethrones2.png", category_id: c2.id)
+               price: 11.90, image: "products/gamethrones4.png", category_id: c2.id)
 
 # Star Wars
 Product.create(title: "Death Star Green", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with Star Wars design of the Death Star.",
