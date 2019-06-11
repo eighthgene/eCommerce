@@ -8,6 +8,9 @@ html {
   font-size: 15px; }
 
 /* ================== HELPERS  =================== */
+footer {
+  bottom: 0;
+}
 a:hover {
   text-decoration: none; }
 
