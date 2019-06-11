@@ -20,4 +20,6 @@
 //= require owl.carousel.min
 //= require slick.min
 //= require script
+//= require autocomplete.js
+
 

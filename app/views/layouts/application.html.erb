@@ -12,17 +12,6 @@
 
 <body class="<%= yield (:body_class) %>">
 
-<% if flash[:notice] %>
-  <div class="alert alert-success" role="alert">
-    <%= notice %>
-  </div>
-<% end %>
-<% if flash[:alert] %>
-  <div class="alert alert-danger" role="alert">
-    <%= alert %>
-  </div>
-<% end %>
-
 <header class="section-header">
   <nav class="navbar navbar-top navbar-expand-lg navbar-dark bg-secondary">
     <div class="container">
@@ -68,9 +57,14 @@
           </div> <!-- brand-wrap.// -->
         </div>
 
+        <!-- search -->
         <div class="col-lg-13-24 col-sm-12 order-3 order-lg-2">
-          <!-- search empty-->
+          <%= form_tag products_path, :method => 'get', :autocomplete => 'off' do %>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search" %>
+          <% end %>
         </div>
+
 
         <div class="col-lg-6-24 col-sm-7 col-8  order-3 order-lg-3">
           <div class="d-flex justify-content-end">
@@ -81,11 +75,22 @@
       </div> <!-- row.// -->
     </div> <!-- container.// -->
   </section> <!-- header-main .// -->
-
 </header>
+
+<% if flash[:notice] %>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert alert-danger" role="alert">
+    <%= alert %>
+  </div>
+<% end %>
 
 
 <%= yield %>
+
 
 <footer class="section-footer bg-secondary ">
   <div class="container">
@@ -94,30 +99,30 @@
         <aside class="col-sm-3 col-md-3 white">
           <h5 class="title">Customer Services</h5>
           <ul class="list-unstyled">
-            <li> <a href="#">Help center</a></li>
-            <li> <a href="#">Money refund</a></li>
-            <li> <a href="#">Terms and Policy</a></li>
-            <li> <a href="#">Open dispute</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Money refund</a></li>
+            <li><a href="#">Terms and Policy</a></li>
+            <li><a href="#">Open dispute</a></li>
           </ul>
         </aside>
         <aside class="col-sm-3  col-md-3 white">
           <h5 class="title">My Account</h5>
           <ul class="list-unstyled">
-            <li> <a href="#"> User Login </a></li>
-            <li> <a href="#"> User register </a></li>
-            <li> <a href="#"> Account Setting </a></li>
-            <li> <a href="#"> My Orders </a></li>
-            <li> <a href="#"> My Wishlist </a></li>
+            <li><a href="#"> User Login </a></li>
+            <li><a href="#"> User register </a></li>
+            <li><a href="#"> Account Setting </a></li>
+            <li><a href="#"> My Orders </a></li>
+            <li><a href="#"> My Wishlist </a></li>
           </ul>
         </aside>
         <aside class="col-sm-3  col-md-3 white">
           <h5 class="title">About</h5>
           <ul class="list-unstyled">
-            <li> <a href="#"> Our history </a></li>
-            <li> <a href="#"> How to buy </a></li>
-            <li> <a href="#"> Delivery and payment </a></li>
-            <li> <a href="#"> Advertice </a></li>
-            <li> <a href="#"> Partnership </a></li>
+            <li><a href="#"> Our history </a></li>
+            <li><a href="#"> How to buy </a></li>
+            <li><a href="#"> Delivery and payment </a></li>
+            <li><a href="#"> Advertice </a></li>
+            <li><a href="#"> Partnership </a></li>
           </ul>
         </aside>
         <aside class="col-sm-3">
@@ -141,11 +146,11 @@
     </section>
     <section class="footer-bottom row border-top-white">
       <div class="col-sm-6">
-        <p class="text-white-50"> Made with &lt;3 <br>  by Vosidiy M.</p>
+        <p class="text-white-50"> Made with &lt;3 <br> by Vosidiy M.</p>
       </div>
       <div class="col-sm-6">
         <p class="text-md-right text-white-50">
-          Copyright ©  <br>
+          Copyright © <br>
           <a href="http://bootstrap-ecommerce.com" class="text-white-50">Bootstrap-ecommerce UI kit</a>
         </p>
       </div>
@@ -160,6 +165,15 @@
             $(this).remove();
         });
     }, 4000);
+</script>
+
+<script>
+    var products = <%= Product.all.to_json.html_safe %>;
+    var titles = new Array(products.length)
+    for (i = 0; i < products.length; i++) {
+        titles[i] = products[i].title;
+    }
+    autocomplete(document.getElementById("search"), titles);
 </script>
 
 </body>
