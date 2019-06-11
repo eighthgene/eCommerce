@@ -14,8 +14,8 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery-2.0.0.min
 //= require bootstrap.bundle.min
+//= require jquery-2.0.0.min
 //= require fancybox.min
 //= require owl.carousel.min
 //= require slick.min

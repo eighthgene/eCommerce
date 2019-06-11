@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get '/products/:id', to: 'products#show', as: 'product'
   get '/products', to: 'products#index', as: 'products'
 
+  # Terms of use and privacy policy
+  get '/terms_of_use', to: 'legal_aspects#terms_of_use', as: 'terms'
+  get '/privacy_policy', to: 'legal_aspects#privacy_policy', as: 'privacy'
+
 
   # Cart and order
   resources :order_items

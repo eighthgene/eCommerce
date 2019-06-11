@@ -102,11 +102,12 @@
               </div> <!-- form-group// -->
 
               <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block"> Register</button>
+                <button type="submit" class="btn btn-primary btn-block"> Sign Up</button>
               </div> <!-- form-group// -->
-              <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of
-                use and Privacy Policy.
+              <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br><%=link_to "Terms of
+                use", terms_path %>  and <%=link_to "Privacy Policy", privacy_path %> Privacy Policy.
               </small>
+
             </form>
           <% end %>
         </article> <!-- card-body end .// -->

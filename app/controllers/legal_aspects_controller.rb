@@ -1,0 +1,4 @@
+class LegalAspectsController < ApplicationController
+
+
+end

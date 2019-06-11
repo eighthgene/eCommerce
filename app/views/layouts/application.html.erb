@@ -60,8 +60,12 @@
         <!-- search -->
         <div class="col-lg-13-24 col-sm-12 order-3 order-lg-2">
           <%= form_tag products_path, :method => 'get', :autocomplete => 'off' do %>
-            <%= text_field_tag :search, params[:search] %>
-            <%= submit_tag "Search" %>
+            <div class="input-group w-100">
+              <%= text_field_tag :search, params[:search], :style => 'width:60%;', :class => 'form-control', :placeholder => 'Search' %>
+              <%= button_tag '', :class => 'btn btn-primary' do %>
+                <i class="fa fa-search"></i>
+              <% end %>
+            </div>
           <% end %>
         </div>
 
