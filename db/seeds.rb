@@ -52,10 +52,25 @@ Product.create(title: "Darth Maul", description: "Short sleeve t-shirt made of 1
                price: 10.95, image: "products/starwars3.png", category_id: c3.id)
 
 # The Walking Dead
+Product.create(title: "Fortuna Wheel", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with The Walking Dead design of the characters in a ferris wheel.",
+               price: 11.90, image: "products/walkingdead1.png", category_id: c4.id)
+
 # Dragon Ball
+Product.create(title: "Orange silhouette", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with Dragon Ball design of the orange silhouette of Goku.",
+               price: 10.90, image: "products/dragonball3.png", category_id: c5.id)
+
 # Lord of the rings
+Product.create(title: "Gandalf Portal", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with The Lord of the Rings design of Gandalf's silhouette and portal.",
+               price: 11.95, image: "products/señoranillos3.png", category_id: c6.id)
+
 # Jurassic Park
+Product.create(title: "T-Rex Neon", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Customized with Jurassic Park design of a T-Rex with neon colors.",
+               price: 11.95, image: "products/jurassic1.png", category_id: c7.id)
+
 # Pokemon
+Product.create(title: "Pikachu Lightning", description: "Short sleeve t-shirt made of 100% cotton straight cut and round neck. Personalized with Pikachu Pokemon design and lightning.",
+               price: 10.95, image: "products/pokemon1.png", category_id: c8.id)
+
 
 
 
