@@ -9,15 +9,13 @@
     <div class="row d-flex" style="min-height:600px;">
       <div class="col-sm-6 d-flex align-items-center">
         <header class="intro-wrap text-white">
-          <h2 class="display-3"> Amazing place for hero title </h2>
-          <p class="lead">Bootstrap ecommerce is more then template - also framework. <br> It is modern and fully
-            customizable websites, WebApp and Mobile template for Your Project</p>
-          <a href="#" class="btn btn-warning">Download</a>
-          <a href="#" class="btn btn-light">Learn more</a>
+          <h2 class="display-3"> T-shirt plus + </h2>
+          <p class="lead">Here you can find and buy unique T-shirts. <br> Youth, stylish and cheap.</p>
+          <%= link_to 'Go to shop', root_path, :class => 'btn btn-warning' %>
         </header>  <!-- intro-wrap .// -->
       </div> <!-- col.// -->
       <div class="col-sm-6 text-right">
-        <img src="/assets/items/comp.png" class="img-fluid my-5" width="500">
+        <%=image_tag(('landing-shirt'), :class => 'img-fluid my-5', :width =>"500") %>
       </div> <!-- col.// -->
     </div> <!-- row.// -->
   </div> <!-- container .//  -->
@@ -30,38 +28,37 @@
   <div class="container">
 
     <header class="section-heading text-center">
-      <h2 class="title-section">How it works </h2>
-      <p class="lead"> Good sub heading this sounded nonsense to Alice </p>
+      <h2 class="title-section">Why us?</h2>
+      <p class="lead">Customers choose our products for these reasons</p>
     </header><!-- sect-heading -->
 
     <div class="row">
       <aside class="col-sm-4">
         <figure class="itembox text-center">
-          <span class="icon-wrap icon-lg bg-secondary white"><i class="fa fa-gamepad"></i></span>
+          <span class="icon-wrap icon-lg bg-secondary white"><i class="fa fa-paypal"></i></span>
           <figcaption class="text-wrap">
-            <h4 class="title">Sync across all devices</h4>
-            <p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her
-              surprise.</p>
+            <h4 class="title">Easy and safer way to pay </h4>
+            <p>PayPal is a global service that moves the payment amount from your credit card
+              to the merchant without sharing your financial information.</p>
           </figcaption>
         </figure> <!-- iconbox // -->
       </aside> <!-- col.// -->
       <aside class="col-sm-4">
         <figure class="itembox text-center">
-          <span class="icon-wrap icon-lg bg-secondary white"><i class="fa fa-heart"></i></span>
+          <span class="icon-wrap icon-lg bg-secondary white"><i class="fa fa-send"></i></span>
           <figcaption class="text-wrap">
-            <h4 class="title">Easy to Customize</h4>
-            <p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her
-              surprise. </p>
+            <h4 class="title">Free and fast delivery</h4>
+            <p>We will process your order in the coming hours and delivery will take no more than 2-3 days. </p>
           </figcaption>
         </figure> <!-- iconbox // -->
       </aside> <!-- col.// -->
       <aside class="col-sm-4">
         <figure class="itembox text-center">
-          <span class="icon-wrap icon-lg bg-secondary  white"><i class="fa fa-users"></i>	</span>
+          <span class="icon-wrap icon-lg bg-secondary  white"><i class="fa fa-modx"></i>	</span>
           <figcaption class="text-wrap">
-            <h4 class="title">Unique Interface Design</h4>
-            <p>This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her
-              surprise. </p>
+            <h4 class="title">Unique T-shirts</h4>
+            <p>Design and drawings specially developed by our artists, these t-shirts you will not find anywhere. Be
+              unique. </p>
           </figcaption>
         </figure> <!-- iconbox // -->
       </aside> <!-- col.// -->
@@ -69,7 +66,7 @@
 
     <p class="text-center">
       <br>
-      <a href="#" class="btn btn-warning">Some action button</a>
+      <%= link_to 'Find new T-short', root_path, :class => 'btn btn-warning' %>
     </p>
 
   </div><!-- container // -->
@@ -81,23 +78,15 @@
   <div class="container">
 
     <header class="section-heading text-center">
-      <h2 class="title-section">Section name</h2>
-      <p class="lead"> Good sub heading this sounded nonsense to Alice </p>
+      <h2 class="title-section">Our History</h2>
+      <p class="lead"> Briefly about us and who we are </p>
     </header><!-- sect-heading -->
 
     <div class="row justify-content-center">
       <article class="col-md-6 text-center">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Young independent spanish company based on Barcelona. We provide the largest collection of merchandise on the
+          net spanning across the decades of art, film and all things entertainment. We curate the best collections of
+          entertainment-inspired clothing and bring them to you on a range of different unique t-shirts.</p>
       </article> <!-- col.// -->
     </div> <!-- row.// -->
 
@@ -111,23 +100,38 @@
   <div class="container">
 
     <header class="section-heading text-center">
-      <h2 class="title-section"> Another Section</h2>
-      <p class="lead"> Good sub heading this sounded nonsense to Alice </p>
+      <h2 class="title-section"> How to Buy</h2>
     </header><!-- sect-heading -->
 
     <div class="row justify-content-center">
       <article class="col-md-6 text-center">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Purchase any of our shirts anytime and anywhere using a Paypal account. Fill the cart with many products as
+          you wish and feel free to modify or cancel your order whenever you want. Easy and fast payment process.
+          Integration made easy with Plug'n Play modules.</p>
+      </article> <!-- col.// -->
+    </div> <!-- row.// -->
+
+  </div> <!-- container .//  -->
+</section>
+
+
+<section id="content" class="section-content padding-y-lg">
+  <div class="container">
+
+    <header class="section-heading text-center">
+      <h2 class="title-section">Delivery and return policy</h2>
+    </header><!-- sect-heading -->
+
+    <div class="row justify-content-center">
+      <article class="col-md-6 text-center">
+        <p>Delivery will normally be made within 1-2 working days from the date of dispatch to all Spain mainland
+          addresses. Please Note a ‘working day’ means a Monday, Tuesday, Wednesday, Thursday or Friday that is not a
+          Bank or Public Holiday.
+          We want to make sure you are completely happy with your purchase and make every effort to ensure you have the
+          correct size and colour information available to you at the time of purchase.
+          However, if you are not 100% happy, we have a 30 day return policy and will accept returns for an exchange of
+          size, colour or for a refund. Items must be returned as new, in the original packaging.
+          Please ensure you contact us before returning your items so we can approve the return.</p>
       </article> <!-- col.// -->
     </div> <!-- row.// -->
 
