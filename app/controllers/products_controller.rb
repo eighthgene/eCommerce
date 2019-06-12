@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
       @products = @category.products.order(:title)
     elsif params.has_key?(:select_param)
       @select_param = params[:select_param]
-      @products = Product.order("#{@select_param} DESC").first(10)
+      @products = Product.order("#{@select_param}").first(10)
       @type = param_type(@select_param)
     elsif params[:search]
       @products = Product.search(params[:search]).order("created_at DESC")
@@ -32,10 +32,14 @@ class ProductsController < ApplicationController
 
   def param_type(type)
     case type
-    when 'created_at'
+    when 'created_at DESC'
       "New arrival"
-    when 'views'
+    when 'views DESC'
       'Populars'
+    when 'price ASC'
+      'Cheapest'
+    when 'price DESC'
+      'Expensive'
     else
       # type code here
     end

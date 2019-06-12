@@ -13,10 +13,10 @@
                   <%= link_to 'All products', {:controller => "products", :action => :index}, :class => "nav-link" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to 'New arrival', {:controller => "products", :action => :index, :select_param => 'created_at'}, :class => "nav-link" %>
+                  <%= link_to 'New arrival', {:controller => "products", :action => :index, :select_param => 'created_at DESC'}, :class => "nav-link" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to 'Populars', {:controller => "products", :action => :index, :select_param => 'views'}, :class => "nav-link" %>
+                  <%= link_to 'Populars', {:controller => "products", :action => :index, :select_param => 'views DESC'}, :class => "nav-link" %>
                 </li>
               </ul>
             </div> <!-- collapse .// -->
@@ -84,6 +84,16 @@
               <!-- ============== main slidesow .end // ============= -->
             </div> <!-- col.// -->
             <div class="col-lg-3 col-md-4">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <h6>The cheapest T-shorts</h6>
+                  <%= link_to 'Show', {:controller => "products", :action => :index, :select_param => 'price ASC', :class => "btn btn-primary btn-sm btn-round"}  %>
+                </li>
+                <li class="list-group-item">
+                  <h6>Most expensive T-shorts</h6>
+                  <%= link_to 'Show', {:controller => "products", :action => :index, :select_param => 'price DESC', :class => "btn btn-primary btn-sm btn-round"}  %>
+                </li>
+              </ul>
             </div> <!-- col.// -->
           </div> <!-- row.// -->
           <!-- ======== intro aside ========= .// -->
