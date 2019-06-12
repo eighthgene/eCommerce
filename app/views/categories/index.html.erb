@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container padding-top">
   <section>
     <div class="container">
       <div class="row no-gutters">
@@ -27,7 +27,7 @@
   </section>
 
   <!-- ========================= SECTION MAIN ========================= -->
-  <section class="section-main padding-bottom">
+  <section class="section-main">
     <div class="container">
       <div class="row no-gutters border border-top-0 bg-white">
         <aside class="col-lg-5-24">
@@ -71,33 +71,19 @@
 
               <div class="owl-init slider-main owl-carousel" data-items="1" data-margin="1" data-nav="true" data-dots="false">
                 <div class="item-slide">
-                  <img src="../assets/banners/slide1.jpg">
+                  <%= link_to image_tag('banners/game'), category_products_path(2) %>
                 </div>
                 <div class="item-slide">
-                  <img src="../assets/banners/slide2.jpg">
+                  <%= link_to image_tag('banners/harrypoter'), category_products_path(1) %>
                 </div>
                 <div class="item-slide">
-                  <img src="../assets/banners/slide3.jpg">
+                  <%= link_to image_tag('banners/starwars'), category_products_path(3) %>
                 </div>
               </div>
 
               <!-- ============== main slidesow .end // ============= -->
             </div> <!-- col.// -->
             <div class="col-lg-3 col-md-4">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                  <h6>Group of items goes here</h6>
-                  <a href="#" class="btn btn-primary btn-sm btn-round"> View all </a>
-                </li>
-                <li class="list-group-item">
-                  <h6>Group of items goes here</h6>
-                  <a href="#" class="btn btn-primary btn-sm btn-round"> View all </a>
-                </li>
-                <li class="list-group-item">
-                  <h6>Group of items goes here</h6>
-                  <a href="#" class="btn btn-primary btn-sm btn-round"> View all </a>
-                </li>
-              </ul>
             </div> <!-- col.// -->
           </div> <!-- row.// -->
           <!-- ======== intro aside ========= .// -->

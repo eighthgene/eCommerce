@@ -1,4 +1,4 @@
-<div class="container padding-top padding-bottom">
+<div class="container padding-top padding-bottom", style="margin-bottom: 20%;">
 
   <div class="card">
     <div class="card-body">
@@ -30,6 +30,12 @@
   </div>
 
   <hr>
+
+  <% if @products.blank? %>
+    <div class="alert alert-danger">
+      Product <b><%= params[:search] %></b> not found, try again.
+    </div>
+  <% end %>
 
   <%= render @partial %>
 
